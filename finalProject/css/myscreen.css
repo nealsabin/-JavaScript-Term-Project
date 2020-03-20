@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+body {
+	font-size:1.5em;
+    color: #933024;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+nav {
+    margin: 0;
+    padding: 0;
+    clear:both;
+    float:right;  
+}
+nav i {
+    text-decoration:none;
+    color: #D0CFCD;
+    margin: 0;
+    padding: 0;
+    max-height: 1.5em;
+    font-size:1.5em;
+}
+nav ul i:hover{
+    display:block;
+    color:#933024;
+    max-height: 1.5em;
+    font-size:1.5em;
+    margin: 0;
+    padding: 0;
+}
+header{
+	width:100%;
+    margin-top:0%;
+	/* background-color:#4c505b; */
+    padding:10px;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.5em;  
+}
+h1{	
+    text-align:center;
+    letter-spacing: 0.15em;
+    font-size:3vmax;
+    font-family: 'Roboto', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color:#933024;
+    color:#D0CFCD;
+    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+}
+
+section{
+    background:#64875f;
+    margin: auto;
+    border-radius: 10px;
+}
+aside {
+    background: #933024;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+footer {
+    font-family: 'Roboto', sans-serif;
+    color:#933024;
+    text-shadow: -1px 0 #D0CFCD, 0 1px #D0CFCD, 1px 0 #D0CFCD, 0 -1px #D0CFCD;
+    text-align: center;
+    font-size:1.5vmax;
+    padding-top: 1%;
+    bottom: 0.5%;
+}
+img{
+	box-shadow:2px 2px #555;
+}
+.indent{
+	text-indent:40px;
+}
+.center{
+	margin-right:auto;
+    margin-left:auto;
+    background-color: #1e1f22;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    padding: 5%;
+}
+  
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);   
+    text-align: center;
+}
+  
+.container:hover .image {
+    opacity: 0.3;
+}
+  
+.container:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    background-color: #1e1f22;
+    color: #D0CFCD;
+    font-size: 16px;
+    padding: 16px 32px;
+    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+}
+
+.text:hover {
+    background-color: #555;
+    opacity: 1;
+    /* color: #D0CFCD;
+    font-size: 16px;
+    padding: 16px 32px; */
+    /* clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%); */
+}
+
+.sidenav { 
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1;
+    top: 0; 
+    right: 0;
+    background-color: #1e1f22; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    padding-top: 2%; 
+}
+.sidenav a { 
+    padding: 8px 8px 8px 32px; 
+    text-decoration: none; 
+    font-size: 25px;
+    color: #F2F1EE; 
+    display: block; 
+    transition: 0.3s; 
+} 
+                  
+.sidenav a:hover { 
+    color: #933024 
+} 
+                      
+.sidenav .closebtn { 
+    position: absolute; 
+    top: 0; 
+    right: 25px; 
+    font-size: 36px; 
+    margin-left: 50px; 
+} 
+                          
+#main { 
+    float: right;
+    color: #933024;
+    transition: margin-right .5s; 
+    padding-top:1%;
+    padding-right: 1%; 
+} 
+#main:hover { 
+    float: right;
+    color: #F2F1EE;
+    transition: margin-right .5s; 
+    padding-top:1%;
+    padding-right: 1%;
+} 
+
+.icon-bar {
+    width: 30%;
+    background-color:#933024;
+    overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
+    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+}
+
+.icon-bar a {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center-align text */
+    width: max-content;
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-left: 5%;
+    color: #1e1f22;
+    font-size:3vmax;
+}
+
+.icon-bar a:hover {
+    background-color: #555; /* Add a hover color */
+}
+
+@media screen and (max-height: 450px) { 
+    .sidenav {padding-top: 15px;} /* decreases padding-top for mobile */ 
+    .sidenav a {font-size: 18px;} /* decreases link font-size for mobile */ 
+} 
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;  /* this is being overriden in laptop and desktop */
+    float:left;   /* setting defaults for everything laptop and desktop */
+    padding:15px;   /* setting defaults for everything laptop and desktop */
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
