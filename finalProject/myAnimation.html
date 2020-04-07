@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meddling Kids</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/myAnimation.css" media="all"/>
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text:700|Roboto:700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/40ae125186.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+<nav>
+    <i class="fas fa-info-circle" title="Read Me" type="button" value="create new window" name="create" id="create" onclick="createWindow()"></i>
+</nav>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Welcome to the Mystery Machine Game. The buttons below the playing screen
+          indicate an action you can perform on the Mystery Machine. Enjoy the game!
+        </p>
+    </div>
+</div>
+
+<header>
+  <h1>Mystery Machine</h1>
+</header>
+<article>
+<section>
+<div id ="container">
+<img alt="mystery machine" src="media/machine.png" id ="mysterymachine" />
+</div>
+</section>
+<section style="background-color:white;opacity:.8;padding-top:5px;padding-bottom:10px;height:100px;">
+<p style="text-align:center;">
+<button id="down">Move Mystery Machine down</button>
+<button id="up">Move Mystery Machine up </button>
+<button id="right">Move Mystery Machine right</button>
+<button id="left">Move Mystery Machine left</button>
+<button id="rotate">Make Mystery Machine rotate</button>
+<button id="stop">Make Mystery Machine stop</button>
+</p>
+</section>
+<script>
+var id;
+var posX=0;
+var posY=0;
+var elem = document.getElementById("mysterymachine"); 
+
+document.getElementById("down").addEventListener("click",function() {
+  var id = setInterval(frame, 5);
+  posY=elem.y;
+  posX=elem.x; 
+  function frame() {
+    document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+    if (posY>=440) {
+      clearInterval(id);
+    } else {
+      posY++; 
+      elem.style.top = posY + 'px'; 
+      document.getElementById("xCoord").value=(elem.x+35);
+      document.getElementById("yCoord").value=(elem.y-40);
+    }
+  }
+});
+
+document.getElementById("up").addEventListener("click",function() {
+  var id = setInterval(frame, 5);
+  posY=elem.y;
+  posX=elem.x; 
+  function frame() {
+    document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+    if (posY <= 40) {
+      clearInterval(id);
+    } else {
+      posY--; 
+      elem.style.top = posY + 'px'; 
+      document.getElementById("xCoord").value=(elem.x+35);
+      document.getElementById("yCoord").value=(elem.y-40);
+    }
+  }
+});
+
+document.getElementById("right").addEventListener("click",function() {
+  posY=elem.y;
+  posX=elem.x; 
+  var id = setInterval(frame, 5);
+  function frame() {
+    document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+    if (posX >= 785) {
+      clearInterval(id);
+    } else {
+      posX++;
+      elem.style.left = posX + 'px'; 
+      document.getElementById("xCoord").value=(elem.x+35);
+      document.getElementById("yCoord").value=(elem.y-40);
+    }
+  }
+});
+
+document.getElementById("left").addEventListener("click",function() {
+  posY=elem.y;
+  posX=elem.x; 
+  var id = setInterval(frame, 5);
+  function frame() {
+    document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+    if (posX <= -35) {
+      clearInterval(id);
+    } else {
+      posX--;
+      elem.style.left = posX + 'px'; 
+      document.getElementById("xCoord").value=(elem.x+35);
+      document.getElementById("yCoord").value=(elem.y-40);
+    }
+  }
+});
+
+document.getElementById("rotate").addEventListener("click",function() {
+    var img = document.getElementById('mysterymachine');
+    img.setAttribute("class", "rotate-image")
+});
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("create");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+<div id="coords">
+<p> X Coordinate:<input type="text" id="xCoord" /><br> 
+ Y Coordinate:<input type="text" id="yCoord" /></p>
+ </div>
+ </article>
+</body>
+</html>

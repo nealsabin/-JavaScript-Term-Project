@@ -1,0 +1,123 @@
+body{
+    background-image:url('../media/background.jpg');
+    background-repeat:no-repeat;
+    background-size:950px auto;
+    background-color:black;
+    background-position: center;
+    font-size:1.5em;
+    color: #933024;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  h1{	
+      text-align:center;
+      letter-spacing: 0.15em;
+      font-size:3vmax;
+      font-family: 'Roboto', sans-serif;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+      width: max-content;
+      padding-left: 3%;
+      padding-right: 3%;
+      padding-top: 0.5%;
+      padding-bottom: 0.5%;
+      background-color:#933024;
+      color:#D0CFCD;
+      clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+  }
+  #container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  
+  }
+  #mysterymachine {
+    width: 150px;
+    height: 150px;
+    top:50px;
+    position:relative;
+    background-color: none;
+  }
+  
+  input{
+      text-align:center;
+  }
+  #coords{
+      position:absolute;
+      left:935px;
+      top:590px;
+  }
+  article{
+    margin: auto;
+  }
+  section{
+      width:900px;
+    height:600px;
+    margin: auto;
+  }
+  button{
+      width:200px;
+      padding:10px;
+      color:white;
+      background-color: #933024;
+  }
+  .rotate-image {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  nav {
+      margin-top: 1%;
+      margin-right: 1%;
+      padding: 0;
+      clear:both;
+      float:right;  
+  }
+  nav i {
+      text-decoration:none;
+      color: #D0CFCD;
+      margin: 0;
+      padding: 0;
+      max-height: 1.5em;
+      font-size:1.5em;
+  }
+  nav i:hover{
+      display:block;
+      color:#933024;
+      max-height: 1.5em;
+      font-size:1.5em;
+      margin: 0;
+      padding: 0;
+  }
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      margin-top: 15%;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: hidden; /* Enable scroll if needed */
+  }
+  /* Modal Content */
+  .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 1%;
+      border: 3px solid #1e1f22;
+      width: 80%;
+  }
+  /* The Close Button */
+  .close {
+      color: #933024;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }

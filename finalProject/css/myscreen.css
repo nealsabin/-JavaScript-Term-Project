@@ -14,7 +14,8 @@ body {
     padding-right: 1%;
 }
 nav {
-    margin: 0;
+    margin-top: 1%;
+    margin-right: 1%;
     padding: 0;
     clear:both;
     float:right;  
@@ -27,7 +28,7 @@ nav i {
     max-height: 1.5em;
     font-size:1.5em;
 }
-nav ul i:hover{
+nav i:hover{
     display:block;
     color:#933024;
     max-height: 1.5em;
@@ -215,6 +216,38 @@ img{
 
 .icon-bar a:hover {
     background-color: #555; /* Add a hover color */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin-top: 15%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 1%;
+    border: 3px solid #1e1f22;
+    width: 80%;
+}
+/* The Close Button */
+.close {
+    color: #933024;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (max-height: 450px) { 

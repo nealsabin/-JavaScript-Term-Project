@@ -1,0 +1,35 @@
+body{
+    background-image: url('../media/map.jpg');
+    background-repeat: repeat-y;
+    background-position: center top;
+    font-size: 14pt;
+}
+h1{	
+    text-align:center;
+    letter-spacing: 0.15em;
+    font-size:3vmax;
+    font-family: 'Roboto', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color:#933024;
+    color:#D0CFCD;
+    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+}
+div{
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    margin-right: 20%;
+}
+canvas {
+    display: inline;
+    border: 1px solid #d3d3d3;
+    /* background-image: url('../media/underwater.jpg');
+    background-color: #f1f1f1; */
+}
+
