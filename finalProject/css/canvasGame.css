@@ -1,24 +1,34 @@
 body{
-    background-image: url('../media/map.jpg');
+    /* background-image: url('../media/map.jpg');
     background-repeat: repeat-y;
-    background-position: center top;
-    font-size: 14pt;
+    background-position: center top; */
+    background-image: linear-gradient(rgb(35, 53, 131),rgb(150, 219, 247));
+    background-attachment: fixed;
+    font-size:1.5em;
+    color: #e27924;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 h1{	
     text-align:center;
     letter-spacing: 0.15em;
-    font-size:3vmax;
+    font-size:2.5vmax;
     font-family: 'Roboto', sans-serif;
     margin-left: auto;
     margin-right: auto;
     width: max-content;
     padding-left: 3%;
     padding-right: 3%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    background-color:#933024;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color:#e27924;
     color:#D0CFCD;
     clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+}
+p{
+    text-align: center;
+    margin: auto;
 }
 div{
     width: 100%;
@@ -27,9 +37,85 @@ div{
     margin-right: 20%;
 }
 canvas {
-    display: inline;
+    display: block;
     border: 1px solid #d3d3d3;
+    margin-left: auto;
+    margin-right: auto;
     /* background-image: url('../media/underwater.jpg');
     background-color: #f1f1f1; */
 }
-
+.wrapper {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+button{
+    background-color: #509324;
+    border: none;
+    color: #d3d3d3;
+    margin-bottom: 1%;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+button:hover{
+    background-color: #d3d3d3;
+    color: #509324;
+}
+nav {
+    margin-top: 1%;
+    margin-right: 1%;
+    padding: 0;
+    clear:both;
+    float:right;  
+}
+nav i {
+    text-decoration:none;
+    color: #D0CFCD;
+    margin: 0;
+    padding: 0;
+    max-height: 1.5em;
+    font-size:1.5em;
+}
+nav i:hover{
+    display:block;
+    color:#e27924;
+    max-height: 1.5em;
+    font-size:1.5em;
+    margin: 0;
+    padding: 0;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin-top: 15%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 1%;
+    border: 3px solid #1e1f22;
+    width: 80%;
+}
+/* The Close Button */
+.close {
+    color: #933024;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

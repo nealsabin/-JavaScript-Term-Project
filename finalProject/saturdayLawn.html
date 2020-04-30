@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saturday Lawn, a game where you cut grass and avoid obstacles." />
+    <meta name="keywords" content="lawn,mower,game,JQuery Game" />
+<Title>Saturday Lawn</Title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/saturdayLawn.css" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/40ae125186.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <nav>
+        <i class="fas fa-info-circle" title="Read Me" type="button" value="create new window" name="create" id="create" onclick="createWindow()"></i>
+    </nav>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Welcome to Saturday Lawn. Use the arrow keys to control
+            the lawn mower, cut the patches of grass, and avoid those
+            rocks! Enjoy the game! Current problems include crashes
+            registering slightly before the mower actually touches
+            the rocks, sounds not automatically playing in Firefow browser, 
+            and if the mower hits patches of grass in too quick a succesion,
+            only one noise plays. For future releases, these issues would be fixed. 
+            <br>
+            <br>
+        The game on this site is copyrighted and cannot be distributed without permission from the author. 
+            </p>
+        </div>
+    </div>
+    <header>
+        <h1>Saturday Lawn</h1>
+    </header>
+    <div id="scoreDiv">
+        <b>Score:</b> <span id="score">0</span>
+        <b>High Score:</b> <span id="highScore">0</span>
+    </div>
+    <div id="container">
+        <div id="grass1" class="grass">
+            <img src="media/grass.png" alt="cartoon grass">
+        </div>
+        <div id="grass2" class="grass">
+            <img src="media/grass.png" alt="cartoon grass">
+        </div>
+        <div id="grass3" class="grass">
+            <img src="media/grass.png" alt="cartoon grass">
+        </div>
+        <div id="grass4" class="grass">
+            <img src="media/grass.png" alt="cartoon grass">
+        </div>        
+        <div id="mower" class="mower">
+            <div class="engine"></div>
+            <div class="enginetop"></div>
+            <div class="handle"></div>
+            <div class="frontTireL"></div>
+            <div class="frontTireR"></div>
+            <div class="backTireL"></div>
+            <div class="backTireR"></div>
+        </div>
+        <div id="rock1" class="mower" style="box-shadow: none;">
+            <img src="media/rock.png" alt="cartoon rock">
+        </div>
+        <div id="rock2" class="mower" style="box-shadow: none;">
+            <img src="media/rock.png" alt="cartoon rock">
+        </div>
+        <div id="rock3" class="mower" style="box-shadow: none;">
+            <img src="media/rock.png" alt="cartoon rock">
+        </div>
+        <div id="rock4" class="mower" style="box-shadow: none;">
+            <img src="media/rock.png" alt="cartoon rock">
+        </div>
+        
+        <div id="restartDiv">
+            <button id="restart">
+                Restart<br>
+                <small class="belowRestart">(press enter)</small>
+            </button>
+        </div>
+    </div>
+    <audio id="beep">
+        <source src="media/beep.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="crash">
+        <source src="media/crash.wav" type="audio/mpeg">
+    </audio>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/saturdayLawn.js"></script>
+</html>

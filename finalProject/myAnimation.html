@@ -8,10 +8,10 @@
   <script src="https://kit.fontawesome.com/40ae125186.js" crossorigin="anonymous"></script> 
 </head>
 <body>
+<!-- Read Me Info  -->
 <nav>
     <i class="fas fa-info-circle" title="Read Me" type="button" value="create new window" name="create" id="create" onclick="createWindow()"></i>
 </nav>
-
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -19,7 +19,12 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <p>Welcome to the Mystery Machine Game. The buttons below the playing screen
-          indicate an action you can perform on the Mystery Machine. Enjoy the game!
+        indicate an action you can perform on the Mystery Machine. Enjoy the game!
+        An issue with the game is that when the 'rotate' button is clicked a second
+        time, the mystery machine does not rotate again. For a future release I would like
+        to fix this. <br>
+        <br>
+        The game on this site is copyrighted and cannot be distributed without permission from the author. 
         </p>
     </div>
 </div>
@@ -49,6 +54,7 @@ var posX=0;
 var posY=0;
 var elem = document.getElementById("mysterymachine"); 
 
+// move machine down
 document.getElementById("down").addEventListener("click",function() {
   var id = setInterval(frame, 5);
   posY=elem.y;
@@ -66,6 +72,7 @@ document.getElementById("down").addEventListener("click",function() {
   }
 });
 
+//move machine up
 document.getElementById("up").addEventListener("click",function() {
   var id = setInterval(frame, 5);
   posY=elem.y;
@@ -83,6 +90,7 @@ document.getElementById("up").addEventListener("click",function() {
   }
 });
 
+//move machine right
 document.getElementById("right").addEventListener("click",function() {
   posY=elem.y;
   posX=elem.x; 
@@ -100,6 +108,7 @@ document.getElementById("right").addEventListener("click",function() {
   }
 });
 
+//move machine left
 document.getElementById("left").addEventListener("click",function() {
   posY=elem.y;
   posX=elem.x; 
@@ -117,6 +126,7 @@ document.getElementById("left").addEventListener("click",function() {
   }
 });
 
+// rotate machine
 document.getElementById("rotate").addEventListener("click",function() {
     var img = document.getElementById('mysterymachine');
     img.setAttribute("class", "rotate-image")
@@ -147,7 +157,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
 </script>
 <div id="coords">
 <p> X Coordinate:<input type="text" id="xCoord" /><br> 

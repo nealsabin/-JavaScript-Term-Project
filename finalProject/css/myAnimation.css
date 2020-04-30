@@ -90,6 +90,14 @@ body{
       margin: 0;
       padding: 0;
   }
+  ul {
+    list-style-type: none;
+    margin-top: 1%;
+    margin-left: 1%;
+    padding: 0;
+    clear: both;
+    float: left;
+}
   /* The Modal (background) */
   .modal {
       display: none; /* Hidden by default */

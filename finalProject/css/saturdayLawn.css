@@ -1,0 +1,239 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient(rgb(87, 198, 226),rgb(215, 221, 204));
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container{
+    position: relative;
+    height: 90vh;
+    width: 25%;
+    left: 35%;
+    margin-top: 1%;
+    background-color: #3a7016;
+    overflow: hidden;
+}
+.grass{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+}
+#grass{
+    z-index: 0;
+    left: 50%;
+}
+#grass1{
+    top: -150px; 
+    left: 10%;
+}
+#grass2{
+    top: -150px;
+    left: 30%;
+}
+#grass3{
+    top: -450px;
+    left: 60%;
+}
+#grass4{
+    top: -300px;
+    left: 90%;
+}
+.mower{
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px 0px black;
+}
+#mower{
+    bottom: 8%;
+    left: 50%;
+    background-color: #933024;
+    z-index: 0;
+}
+.engine{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 12%;
+    border-radius: 50%;
+    background-color: #484848;
+}
+.enginetop{
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    margin-left: 12px;
+    top: 28%;
+    border-radius: 10px 10px 5px 5px;
+    background-color: #9b9494;
+}
+.handle{
+    position: absolute;
+    height: 60%;
+    width: 80%;
+    margin-left: 3%;
+    bottom: -55%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #1e1f22;
+    border-radius: 0px 0px 5px 5px;
+    z-index: -1;
+}
+.frontTireL{
+    position: absolute;
+    height: 30%;
+    width: 10%;
+    background-color: #1e1f22;
+    top: 10%;
+    left: -10%;
+    border-radius: 5px 0px 0px 5px;
+}
+.frontTireR{
+    position: absolute;
+    height: 30%;
+    width: 10%;
+    background-color: #1e1f22;
+    top: 10%;
+    left: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+.backTireL{
+    position: absolute;
+    height: 30%;
+    width: 10%;
+    background-color: #1e1f22;
+    top: 60%;
+    left: -10%;
+    border-radius: 5px 0px 0px 5px;
+}
+.backTireR{
+    position: absolute;
+    height: 30%;
+    width: 10%;
+    background-color: #1e1f22;
+    top: 60%;
+    left: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+#rock1{
+    top: -100px;
+    left: 60%;
+}
+#rock2{
+    top: -200px;
+    left: 40%;
+}
+#rock3{
+    top: -350px;
+    left: 50%;
+}
+#rock4{
+    top: -50px;
+    left: 20%;
+}
+#restartDiv {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.3em;
+    text-align: center;
+    display: none;
+}
+
+#restart {
+    border: none;
+    padding: 25px;
+    color: white;
+    background-color: #ec5a5a;
+    border-radius: 25%;
+    font-size: 30px;
+    margin-top: 50%;
+}
+.belowRestart{
+    font-size: 15px;
+}
+h1{
+    position: absolute;
+    margin-top: 1%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-size: 2.3em;
+    margin-left: 5%;
+    background-color: white;
+    color: #3a7016;
+    box-shadow: 4px 4px 0px 1px #808080;    
+}
+#scoreDiv{
+    position: absolute;
+    margin-top:5%;
+    margin-left: 5%;
+    font-size: 1.5em;
+    background-color: white;
+    color: #454545;
+    padding: 10px;
+    box-shadow: 4px 4px 0px 1px #808080;
+}
+
+/* Read Me */
+nav {
+    margin-top: 0;
+    margin-right: 1%;
+    padding: 0;
+    clear:both;
+    float:right;  
+    font-size: 1.5em;
+}
+nav i {
+    text-decoration:none;
+    color: #3a7016;
+    margin: 0;
+    padding: 0;
+    max-height: 1.5em;
+    font-size:1.5em;
+}
+nav i:hover{
+    display:block;
+    color: #D0CFCD;
+    max-height: 1.5em;
+    font-size:1.5em;
+    margin: 0;
+    padding: 0;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin-top: 15%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 1%;
+    border: 3px solid #1e1f22;
+    width: 80%;
+    text-align: center;
+}
+/* The Close Button */
+.close {
+    color: #933024;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
